@@ -2,7 +2,7 @@
 
 
 * {
-    /* border: 1px red solid;   */
+    /* border: 1px red solid;    */
     box-sizing: border-box;
 }
 
@@ -49,8 +49,9 @@ header h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
-    height: 30%;
+    gap: 3rem;
+    height: 50vh;
+    align-items: center;
 }
 
 img {
