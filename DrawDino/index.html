@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+    <main>
+        <div id="instructions" class="instruction">
+                <h1 id="instruction-1" class="instruction">This cute dinosaur would like you to paint his picture!</h1>
+                <div class="size"><p id="instruction-2" class="instruction">Start by selecting the size of your canvas:</p>
+                    <select id="canvas-size">
+                        <option value="default" disabled>Choose a size</option>
+                        <option value="10">10 x 10</option>
+                        <option value="15">15 x 15</option>
+                        <option value="20">20 x 20</option>
+                        <option value="25">25 x 25</option>
+                    </select>
+                </div>
+                <p id="instruction-3" class="instruction">Then try your best and paint on the canvas using the commands below:</p>
+                <p id="warning" class="warning"></p>
+        </div>
+        <div id="container" class="container"></div>
+        <div id="dino" class="reference"><img src="./images/pixel_dino.png"></div>
+        <div class="instruction under">
+            <p class="instruction">Press [P] to start/pause the inking</p>
+            <p class="instruction">Press [B] to switch betwwen the <span class="black">black</span> and the <span class="green">green</span> color</p>
+            <p class="instruction">Press [R] to reset the canvas</p>
+        </div>
+    </main>
+</body>
+
+<script src="./script.js"></script>
+
+</html>

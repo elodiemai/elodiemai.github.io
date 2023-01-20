@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    box-sizing: content-box;
+}
+
+:root {
+    --painted-fill-color: #a4bc45;
+    --blank-fill-color: rgb(255, 255, 255);
+    --canvas-border-color: #ababab;
+    --grid-line-color: rgb(240, 240, 240);
+}
+
+body {
+    font-family: 'Shadows Into Light', sans-serif;
+    color:#666666; 
+    position: absolute;
+    left: 10%;
+}
+
+h1 {
+    color:#a4bc45;
+    font-size: 2rem;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    padding: 0 10%;
+    align-items: center;
+}
+
+
+.instruction {
+    width: 100%;
+    margin: 1rem 0 ;
+    padding: 0;
+
+
+}
+
+.instruction  p{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: rgb(79, 79, 79);
+    width: fit-content;
+    margin-right: 1rem;
+}
+
+.size {
+    display: flex;
+    flex-direction: row;
+}
+
+p.warning {
+    font-size: 1.5rem;
+    color: red;
+    height: fit-content;
+}
+
+div.container {
+    display: grid;
+    border: 3px solid var(--canvas-border-color);
+    padding: 0px;
+
+
+}
+
+div.square {
+    border: 1px solid var(--grid-line-color);
+    box-sizing: border-box;
+}
+
+div.green {
+    background-color: var(--painted-fill-color);
+}
+
+
+div.black {
+    background-color: black;
+}
+
+div.under p{
+    color:#a9a9a9;
+}
+
+span.black {
+ color: black;
+}
+
+span.green {
+    color: var(--painted-fill-color);
+}
