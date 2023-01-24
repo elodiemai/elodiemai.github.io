@@ -59,7 +59,7 @@ function getComputerChoice() {
 function playRoundGame(playerSelection, computerSelection) {
     const playerSelectionUpper = playerSelection.toUpperCase();
     const compSelectionUpper = computerSelection.toUpperCase();
-
+    displayChoice(playerSelection, computerSelection);
     if (
         (playerSelectionUpper === 'PAPER' && compSelectionUpper === 'ROCK')
         || (playerSelectionUpper === 'ROCK' && compSelectionUpper === 'SCISSORS')
@@ -81,6 +81,8 @@ function playRoundGame(playerSelection, computerSelection) {
     } else {
         return 'Error: Invalid inputs.';
     }
+
+
 
 }
 
@@ -104,6 +106,10 @@ function resetGame() {
     tipKey.classList.toggle('inactive');
     outputDiv.innerText ='Let\'s Go!';
     outputDiv.style.backgroundImage = 'linear-gradient(60deg, rgb(0, 0, 0), rgb(60, 60, 60))';
+    const playChoiceDiv = document.querySelector('.player-choice');
+    const compChoiceDiv = document.querySelector('.computer-choice');
+    playChoiceDiv.innerHTML = '';
+    compChoiceDiv.innerHTML = '';
 }
 
 function writeScore() {
@@ -116,6 +122,13 @@ function writeScore() {
             score.innerText = `Computer: ${compScore}`;
         }
     }
+}
+
+function displayChoice(playChoice, compChoice) {
+    const playChoiceDiv = document.querySelector('.player-choice');
+    const compChoiceDiv = document.querySelector('.computer-choice');
+    playChoiceDiv.innerHTML = `<img src="./${playChoice.toLowerCase()}.png" style="height: 180px;"></img><p class="caption">PLAYER</p>`;
+    compChoiceDiv.innerHTML = `<img src="./${compChoice.toLowerCase()}.png" style="height: 180px;"></img><p class="caption">COMPUTER</p>`;
 }
 
 

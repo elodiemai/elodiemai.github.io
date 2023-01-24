@@ -3,31 +3,51 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Javascript Sandbox</title>
+  <title>Rock, Paper, Scissors</title>
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <div class="nav"><a href="https://github.com/elodiemai">&lt; Back</a></div>
   <header>
     <h1> Welcome to the Rock, Paper, Scissors World Championship!</h1>
     <h2>Will you conquer and become the new Champion?</h2>
   </header>
   <main>
     <div class="icons">
-      <div class="rock icon-card" id="rock"><img class="rock fa fa-large fa-hand-rock-o" src="./rock.png" style="height: 180px;"><p class="rock caption"></p></div>
-      <div class="paper icon-card" id="paper"><img class="paper fa fa-large fa-hand-paper-o" src="./paper.png" style="height: 180px;"><p class="paper caption"></p></div>
-      <div class="scissors icon-card" id="scissors"><img class="scissors fa fa-large fa-hand-scissors-o" src="./scissors.png" style="height: 180px;"><p class="scissors caption"></p></div>
+      <div class="rock icon-card" id="rock"><img class="rock fa fa-large fa-hand-rock-o" src="./rock.png"
+          style="height: 180px;">
+        <p class="rock caption"></p>
+      </div>
+      <div class="paper icon-card" id="paper"><img class="paper fa fa-large fa-hand-paper-o" src="./paper.png"
+          style="height: 180px;">
+        <p class="paper caption"></p>
+      </div>
+      <div class="scissors icon-card" id="scissors"><img class="scissors fa fa-large fa-hand-scissors-o"
+          src="./scissors.png" style="height: 180px;">
+        <p class="scissors caption"></p>
+      </div>
     </div>
-    <div class="subtitle">ROCK</div>
+    <div class="subtitle">CHOOSE YOUR WEAPON</div>
     <div class="results">
-      <div class="score"><span class="score" id="player-score">Player: 0</span><span class="score" id="comp-score">Computer: 0</span></div>
+      <div class="score"><span class="score" id="player-score">Player: 0</span><span class="score"
+          id="comp-score">Computer: 0</span></div>
       <div class="score-details" id="output">Let's Go!</div>
       <div class="press-key inactive">Press any key to play again</div>
     </div>
+    <div class="display">
+      <div class="player-choice">
+        <img src="./scissors.png" style="opacity: 0; height: 180px;"></img>
+      </div>
+      <div class="computer-choice">
+        <img src="./scissors.png" style="opacity: 0; height: 180px;"></img>
+      </div>
+    </div>
   </main>
 </body>
-
-
+<footer>
+  &copy; 2023 - Elodie Mai
+</footer>
 
 </html>

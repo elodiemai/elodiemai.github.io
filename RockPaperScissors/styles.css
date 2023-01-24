@@ -19,7 +19,34 @@ body {
 
 main {
     height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+.icons {
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0; 
+}
+
+.display {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 200px;
+}
+
+.subtitle {
+    font-size: 2em;
+    color:rgb(162, 162, 162);
+    display: flex;
+    margin: auto;
+}
+
 
 header {
     font-display: flex;
@@ -44,15 +71,32 @@ header h2 {
     box-shadow: 5px 5px 1px var(--shadow-color);
 }
 
-
-.icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    height: 50vh;
-    align-items: center;
+.nav {
+    width: 100%;
+    background-color: rgb(19, 18, 18);
 }
+
+
+.nav a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 1rem 50px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.nav a:hover{
+    background-color:rgb(125, 125, 125);
+    color: white;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
 
 img {
     padding: 0;
@@ -60,7 +104,7 @@ img {
     text-align: center;    
 }
 
-img:hover {
+img.fa:hover {
     padding: 1.8rem;
     border: 7px rgb(222, 222, 222) solid;
     box-shadow: 5px 5px 1px var(--shadow-color) ;
@@ -79,6 +123,7 @@ p.caption {
     font-size: 2rem;
     font-weight: 200;
     color: rgba(56, 56, 56, 0.8);
+    text-align: center;
 }
 
 .icon-card {
@@ -86,6 +131,7 @@ p.caption {
     flex-direction: column;
     align-items: center;
     width: fit-content;
+    height: 200px;
 }
 
 div.score {
@@ -104,36 +150,27 @@ span.score {
 .results {
     height: 25%;
     width: 100%;
-    margin: 0;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 0;
 }
 
 .score-details {
+    height: 4rem;
     font-size: 2.5rem;
     font-weight: 100;
-    margin:  0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     background-image: linear-gradient(60deg, rgb(0, 0, 0), rgb(60, 60, 60));
 }
 
-.subtitle {
-    position: absolute;
-    bottom: 27%;
-    left: 47.5%;
-    font-size: 2em;
-    color:rgb(162, 162, 162);
-}
 
 .press-key {
     color:rgb(125, 125, 125);
     text-align: center;
     font-size: 2rem;
     margin: .5rem 0;
-    height: 10vh;
 }
 
 .inactive {
