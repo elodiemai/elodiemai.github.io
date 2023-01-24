@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(-60deg,rgba(0,0,0),rgb(58, 58, 58));
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100%;
+    font-size: 12px;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas: 
+    "top top top side"
+    "mid mid mid side"
+    "mid mid mid side"
+    "mid mid mid side"
+    "mid mid mid side"
+    ;
+    margin: 1.5rem;
+    gap: 5px;
+}
+
+
+#top-button{
+    grid-area: top;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+#central-button {
+    display: grid;
+    grid-area: mid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+
+}
+
+#side-button {
+    display: grid;
+    grid-area: side;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+}
+
+#button-plus {
+    grid-row: auto / span 2;
+    background-color: rgb(30, 89, 44);
+}
+
+#button-ac {
+    background-color: rgb(78, 26, 26);
+}
+
+#button-equal {
+    background-color: rgb(51, 97, 157);
+}
+
+
+
+.button {
+    color:antiquewhite;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid antiquewhite;
+    border-radius: 5px;
+    text-align: center;
+    width: 50px;
+}
+
+
+
+.calculator {
+    height: 550px;
+    width: 25vw;
+    margin: 2% auto;
+    border-radius: 15px;
+    border: 2px solid rgb(193, 193, 193);
+    min-width: 400px;
+    min-height: 500px;
+    max-height: 700px;
+}
+
+.screen {
+    min-height: 100px;
+    width: 90%;
+    background-color: rgb(227, 233, 238);
+    margin: 30px auto;
+    border-radius: 8px;
+    font-family: 'Play';
+    text-align: right;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+
+}
+
+.input {
+    height: 50%;
+    font-size: 2rem;
+    color: rgb(132, 132, 132);
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+
+}
+
+.result {
+    font-size: 3rem;
+    text-align: right;
+    height: 50%;
+}
