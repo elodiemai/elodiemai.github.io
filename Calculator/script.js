@@ -7,7 +7,17 @@ let res = '';
 let inputString = '';
 calc.addEventListener('click',inputButton);
 document.addEventListener('keydown',inputKey);
+const toggle = document.querySelector('.slider');
+toggle.addEventListener('click',switchTheme);
 
+function switchTheme() {
+    calc.classList.toggle('dark');
+    const button = calc.querySelectorAll('.button');
+    button.forEach( b => b.classList.toggle('dark'));
+
+    const body = document.querySelector('body');
+    body.classList.toggle('dark');
+}
 
 function inputButton(e) {
     if(['0','1','2','3','4','5','6','7','8','9','.'].indexOf(e.target.innerText) >= 0) {

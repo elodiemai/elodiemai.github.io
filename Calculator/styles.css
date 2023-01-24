@@ -1,9 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
+:root {
+    --button-border-color: rgb(107, 107, 107);
+    --calc-border-color: rgb(57, 57, 57);
+    --screen-bg-color: rgb(227, 233, 238);
+    --input-text-color: rgb(132, 132, 132);
+    --result-text-color: rgb(36, 36, 36);
+    --body-bg-color1: rgb(235, 235, 235);
+    --body-bg-color2: rgb(244, 244, 244);
+    --button-ac-color: white;
+    --calc-bg-color: rgb(196, 196, 196);
+    --button-bg-color: rgb(226, 219, 196);
+    --theme-text-color: black;
+
+}
+
+:root .dark{
+    --button-border-color: white;
+    --button-ac-color: antiquewhite;
+    --calc-border-color: rgb(193, 193, 193);
+    --screen-bg-color: rgb(227, 233, 238);
+    --input-text-color: rgb(132, 132, 132);
+    --result-text-color: rgb(36, 36, 36);
+    --body-bg-color1: rgba(0,0,0);
+    --body-bg-color2: rgb(58, 58, 58);
+    --calc-bg-color: transparent;
+    --button-bg-color: transparent;
+    --theme-text-color: white;
+}
+
+.mode {
+    display: flex;
+    margin: 15px;
+    padding: 15px;
+    gap: 1rem;
+    color: var(--theme-text-color);
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
 body {
     font-family: 'Ubuntu', sans-serif;
-    background: linear-gradient(-60deg,rgba(0,0,0),rgb(58, 58, 58));
+    background: linear-gradient(-60deg,var(--body-bg-color1),var(--body-bg-color2));
     background-repeat: repeat;
     height: 100vh;
     width: 100%;
@@ -50,26 +149,30 @@ body {
 #button-plus {
     grid-row: auto / span 2;
     background-color: rgb(30, 89, 44);
+    color: var(--button-ac-color);
 }
 
 #button-ac {
     background-color: rgb(78, 26, 26);
+    color: var(--button-ac-color);
 }
 
 #button-equal {
     background-color: rgb(51, 97, 157);
+    color: var(--button-ac-color);
 }
 
 
 
 .button {
-    color:antiquewhite;
+    color: var(--button-border-color);
     font-size: 2rem;
     padding: 1rem;
-    border: 1px solid antiquewhite;
+    border: 1px solid var(--button-border-color);
     border-radius: 5px;
     text-align: center;
     width: 50px;
+    background-color: var(--button-bg-color);
 }
 
 
@@ -79,16 +182,17 @@ body {
     width: 25vw;
     margin: 2% auto;
     border-radius: 15px;
-    border: 2px solid rgb(193, 193, 193);
+    border: 2px solid var(--calc-border-color);
     min-width: 400px;
     min-height: 500px;
     max-height: 700px;
+    background-color: var(--calc-bg-color);
 }
 
 .screen {
     min-height: 100px;
     width: 90%;
-    background-color: rgb(227, 233, 238);
+    background-color: var(--screen-bg-color);
     margin: 30px auto;
     border-radius: 8px;
     font-family: 'Play';
@@ -102,7 +206,7 @@ body {
 .input {
     height: 50%;
     font-size: 2rem;
-    color: rgb(132, 132, 132);
+    color: var(--input-text-color);
     display: flex;
     overflow: hidden;
     justify-content: flex-end;
@@ -113,4 +217,5 @@ body {
     font-size: 3rem;
     text-align: right;
     height: 50%;
+    color: var(--result-text-color);
 }
