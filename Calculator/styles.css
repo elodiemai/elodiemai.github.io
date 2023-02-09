@@ -32,19 +32,24 @@
 
 .mode {
     display: flex;
-    margin: 15px;
+    margin: auto;
     padding: 15px;
     gap: 1rem;
     color: var(--theme-text-color);
+    width: auto;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
-    font-size: 1rem;
+}
+
+.mode > div {
+    font-size: 15px;
+    text-align: center;
 }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: clamp(60px, 10vw, 60px);
     height: 34px;
   }
   
@@ -120,7 +125,7 @@ body {
     "mid mid mid side"
     ;
     margin: 1.5rem;
-    gap: 5px;
+    gap: clamp(1px,5vw,10px);
 }
 
 
@@ -166,26 +171,24 @@ body {
 
 .button {
     color: var(--button-border-color);
-    font-size: 2rem;
+    font-size: 200%;
     padding: 1rem;
     border: 1px solid var(--button-border-color);
     border-radius: 5px;
     text-align: center;
-    width: 50px;
+    width: clamp(35%, 50px);
     background-color: var(--button-bg-color);
+    margin: 1px;
 }
 
 
 
 .calculator {
-    height: 550px;
-    width: 25vw;
+    height: auto;
+    width: clamp(280px, 30%, 350px);
     margin: 2% auto;
     border-radius: 15px;
     border: 2px solid var(--calc-border-color);
-    min-width: 400px;
-    min-height: 500px;
-    max-height: 700px;
     background-color: var(--calc-bg-color);
 }
 
