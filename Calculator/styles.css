@@ -185,7 +185,7 @@ body {
 
 .calculator {
     height: auto;
-    width: clamp(280px, 30%, 350px);
+    width: clamp(330px, 30vw, 350px);
     margin: 2% auto;
     border-radius: 15px;
     border: 2px solid var(--calc-border-color);
